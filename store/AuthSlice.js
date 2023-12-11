@@ -2,10 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // const Url = "https://apps.mohamed-ibrahiem.com";
-// const Url = "https://zayady.deltawy.com";
- const Url = "http://192.168.0.201:8080/zayady";
-
-
+const Url = "https://zayady.deltawy.com";
+//  const Url = "http://192.168.0.201:8080/zayady";
 
 
 
@@ -78,7 +76,6 @@ export const getUserInfo = createAsyncThunk(
     }
   }
 );
-// http://localhost:8080/mohamedibrahim/rest/test.product/saveUserInfo
 export const saveUserInfo = createAsyncThunk(
   "auth/saveUserInfo",
   async (res, thunkAPI) => {

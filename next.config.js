@@ -115,11 +115,7 @@ const nextConfig = {
     locales: ["ar"],
     defaultLocale: "ar",
   },
-  // purgeCSSModules: {
-  //   content: path.join(__dirname, 'pages/**/*.{js,jsx,ts,tsx}'),
-  //   enableDevPurge: true,
-  //   safelist: ['body', 'html'],
-  // }
+ 
 };
 
 

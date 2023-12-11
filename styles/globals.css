@@ -582,7 +582,7 @@ font-family: 'watad', sans-serif !important;
 .login-content form {
   width: 450px;
   border-radius: 4pc 0;
-  background: linear-gradient(45deg, #0383b179, #0383b136, #fff , #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
+  background: linear-gradient(45deg, #0383b10a, #0383b100, #fff , #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
   padding: 50px 30px ;
 }
 .login-content form h1:hover {

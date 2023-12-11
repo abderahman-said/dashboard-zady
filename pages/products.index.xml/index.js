@@ -40,23 +40,23 @@
 // // Default export to prevent next.js errors
 // export default function Sitemap() {}
 
-import axios from "axios";
-import { getServerSideSitemap } from "next-sitemap";
-export const getServerSideProps = async (ctx) => {
-  const result = await axios
-    .get(`http://192.168.0.201:8080/zayady/rest/test.product/getAllProducts`)
-    .then((res) => res.data.products);
+// import axios from "axios";
+// import { getServerSideSitemap } from "next-sitemap";
+// export const getServerSideProps = async (ctx) => {
+//   const result = await axios
+//     .get(`http://192.168.0.201:8080/zayady/rest/test.product/getAllProducts`)
+//     .then((res) => res.data.products);
     
-  // const { data } = await res.data.products;
-  const fields = await result.map((ele) => ({
-    loc: `http://192.168.0.201:8080/zayady/product/${ele.id}/${ele.name.replace(/\s/g, "-")}`,
-    lastmod: ele.udat,
-    priority: 0.7,
-    changefreq: "daily",
-  }));
+//   // const { data } = await res.data.products;
+//   const fields = await result.map((ele) => ({
+//     loc: `http://192.168.0.201:8080/zayady/product/${ele.id}/${ele.name.replace(/\s/g, "-")}`,
+//     lastmod: ele.udat,
+//     priority: 0.7,
+//     changefreq: "daily",
+//   }));
 
-  // console.log({ fields });
-  return getServerSideSitemap(ctx, fields);
-};
+//   // console.log({ fields });
+//   return getServerSideSitemap(ctx, fields);
+// };
 
-export default function SitemapIndex() {}
+// export default function SitemapIndex() {}

@@ -23,6 +23,7 @@ const Register = () => {
   //     progress: undefined,
   //     theme: "light",
   //   });
+ 
 
   const ShowError = (e) => {
     if (!e) {
@@ -34,7 +35,9 @@ const Register = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+
+        
+theme: "light",
       });
     } else {
       toast.error(`${e}`, {
@@ -49,6 +52,7 @@ const Register = () => {
       });
     }
   };
+
   const SendDate = (e) => {
     e.preventDefault();
     if (
@@ -72,12 +76,8 @@ const Register = () => {
             ShowError(originalPromiseResult.Errors[0].errorMSG);
           } else {
             dispatch(getCarts(originalPromiseResult.UserID));
-            if(originalPromiseResult.ISAdmin === false) {
-              router.push("/cp");
-            }else {
-              router.push("/");
-            }
-
+            dispatch(GotoLogin());
+            router.push("/mcp/products"); 
           }
         })
         .catch((rejectedValueOrSerializedError) => {
@@ -155,7 +155,7 @@ const Register = () => {
       >
         تسجيل الدخول
       </button>
-      <div className={styles.go_to_Register_Div}>
+      {/* <div className={styles.go_to_Register_Div}>
         <span> لديك حساب ؟</span>
         <button
           className={styles.go_to_regPage_button}
@@ -167,7 +167,7 @@ const Register = () => {
         >
           تسجيل الدخول
         </button>
-      </div>
+      </div> */}
     </form>
   );
 };

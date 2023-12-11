@@ -65,7 +65,8 @@ const Login = () => {
           } else {
             dispatch(getCarts(originalPromiseResult.id));
             if (originalPromiseResult.isAdmin === false) {
-              router.push("/cp");
+              router.push("/mcp/products");
+              // router.push("/cp");
             } else {
               router.push("/mcp/products");
             }

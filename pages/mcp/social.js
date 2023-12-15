@@ -35,7 +35,7 @@ const Social = () => {
     });
   useEffect(() => {
     const ISAdmin = window.localStorage.getItem("ib_Admin");
-    if (ISAdmin !== "true" || !ISAdmin) {
+    if ( !ISAdmin) {
       router.push("/");
     } else {
       if (!SiteJsonArr) {

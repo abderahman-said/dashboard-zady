@@ -9,8 +9,7 @@ import { deleteMessage, getMessages } from "store/ControlPanal";
 import { Col, Container, Row } from "react-bootstrap";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
-// import AdminNav from "components/Admin/AdminNav/AdminNav";
-import dynamic from "next/dynamic";
+ import dynamic from "next/dynamic";
 const AdminNav = dynamic(() => import("components/Admin/AdminNav/AdminNav"), {
   loading: () => <p>Loading ...</p>,
 });
@@ -26,7 +25,7 @@ const Messages = () => {
   const router = useRouter();
   useEffect(() => {
     const ISAdmin = window.localStorage.getItem("ib_Admin");
-    if (ISAdmin !== "true" || !ISAdmin) {
+    if ( !ISAdmin) {
       router.push("/");
     } else {
       if (!MessagesArr) {

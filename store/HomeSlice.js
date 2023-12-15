@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const Url = "https://zayady.deltawy.com";
-//  const Url = "http://192.168.0.201:8080/zayady";
+// const Url = "https://zayady.deltawy.com";
+ const Url = "http://192.168.0.201:8080/zayady";
 
 // getClients
 export const getClients = createAsyncThunk(
@@ -99,9 +99,9 @@ const HomeSlice = createSlice({
     LastproductJsonArr: null,
     HeaderBannersArr: null,
     BannersArr: null,
-    Url: "https://zayady.deltawy.com",
-    // Url: "http://192.168.0.201:8080/mohamedibrahim",
-  },
+   Url : "http://192.168.0.201:8080/zayady",
+    //  Url: "https://zayady.deltawy.com",
+   },
   reducers: {
     PrintHello: (state, action) => {
       state.HomeHello = "Update Next";

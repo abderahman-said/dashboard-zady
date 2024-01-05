@@ -65,8 +65,7 @@ const Login = () => {
           } else {
             dispatch(getCarts(originalPromiseResult.id));
             if (originalPromiseResult.isAdmin === false) {
-              router.push("/mcp/products");
-              // router.push("/cp");
+              router.push("/cp");
             } else {
               router.push("/mcp/products");
             }
@@ -92,8 +91,8 @@ const Login = () => {
         pauseOnHover
         theme="light"
       />
-      <h1 className="mainHeading">تسجيل الدخول </h1>
-      <div className={styles.inputDiv} >
+      <h1 className={styles.mainHeading}>تسجيل الدخول </h1>
+      <div className={styles.inputDiv}>
         <label htmlFor="name">اسم المستخدم</label>
         <input
           type="text"
@@ -135,7 +134,7 @@ const Login = () => {
         هل نسيت كلمة السر ؟
       </button>
       <div className={styles.go_to_Register_Div}>
-        <span className="span-tr">ليس لديك حساب ؟</span>
+        <span>ليس لديك حساب ؟</span>
         <button
           className={styles.go_to_regPage_button}
           name="go_to_regPage_button"

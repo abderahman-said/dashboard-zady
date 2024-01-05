@@ -29,8 +29,7 @@ export const GetFilteredProducts = createAsyncThunk(
     try {
       const data = await axios
         .post(`${Url}/rest/test.product/getFilteredProducts?timestamp=${new Date().getTime()}`, {
-        // .post(`http://192.168.0.201:8080/mohamedibrahim/rest/test.product/getFilteredProduct?timestamp=${new Date().getTime()}`, {
-          // page: 0,
+           // page: 0,
           ...filters
         })
         .then((res) => res.data);

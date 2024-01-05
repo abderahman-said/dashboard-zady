@@ -36,7 +36,7 @@ const UnAvailable = () => {
   const router = useRouter();
   useEffect(() => {
     const ISAdmin = window.localStorage.getItem("ib_Admin");
-    if ( !ISAdmin) {
+    if ( ISAdmin !== "true" || !ISAdmin) {
       router.push("/");
     } else {
       if (!ALLProducts) {

@@ -25,7 +25,7 @@ import { ClearCart } from "store/ShopSlice";
 const AdminNav = () => {
   const [activeIcon, setActiveIcon] = useState(false);
   // const { CartsArr } = useSelector((state) => state.ShopSlice);
-
+console.log( localStorage)
   const dispatch = useDispatch();
   const router = useRouter();
   return (
@@ -254,7 +254,7 @@ const AdminNav = () => {
           </Link>
         </li>
         <li className="back-li">
-          <Link href={"/"}>
+        <Link href={"/"}>
             <a
               onClick={() => {
                 dispatch(Logout());
